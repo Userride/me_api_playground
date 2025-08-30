@@ -1,0 +1,71 @@
+{
+  "info": {
+    "name": "Me-API Playground",
+    "_postman_id": "b9c1a9b2-0000-4bbb-8e3d-demo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{API}}/health"
+      }
+    },
+    {
+      "name": "Get Profile",
+      "request": {
+        "method": "GET",
+        "url": "{{API}}/profile"
+      }
+    },
+    {
+      "name": "Upsert Profile",
+      "request": {
+        "method": "POST",
+        "url": "{{API}}/profile",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Basic {{BASIC}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Prince Kumar\",\n  \"email\": \"singhprince131074@gmail.com\"\n}"
+        }
+      }
+    },
+    {
+      "name": "List Projects",
+      "request": {
+        "method": "GET",
+        "url": "{{API}}/projects?skill=React&q=food"
+      }
+    },
+    {
+      "name": "Top Skills",
+      "request": {
+        "method": "GET",
+        "url": "{{API}}/skills/top"
+      }
+    },
+    {
+      "name": "Search",
+      "request": {
+        "method": "GET",
+        "url": "{{API}}/search?q=MongoDB"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "API",
+      "value": "http://localhost:5000"
+    },
+    {
+      "key": "BASIC",
+      "value": "YWRtaW46Y2hhbmdlbWU="
+    }
+  ]
+}
